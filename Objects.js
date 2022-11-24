@@ -55,4 +55,53 @@ const companionChanged = () => {
 
 companionChanged()
 
-console.log(party)
+// Prompt 4: Timothy drank this potion. Raise his hitpoints by 20 and remove "potion" from his belongings.
+
+const drankPosion = () => {
+    party[1].hitpoints += 20
+    return party[1].belongings.splice(1,1)
+}
+
+drankPosion()
+
+// Prompt 5: Timothy got hungry and stole Joline's bread. Take it out of her belongings and put it  into Timothy's belongings
+
+const stolenBread = () => {
+    party[0].belongings.splice(1, 1)
+    return party[1].belongings.push('bread')
+}
+
+stolenBread()
+
+// Prompt 6: Joline got upset and left the party. Take her out of the array. (use the name of the leaving member as a parameter)
+ 
+const memberleft = (member) => {
+    
+}
+ 
+
+
+// Prompt 7: Timothy and Sarah have been recruiting. Add a new adventurer to the party. (new adventurer is parameter)
+
+const addNewMember = (member) => {
+    return party.push({name : member})
+}
+
+addNewMember("Jody")
+
+// Prompt 8: The party has been doing well! They found 200 gold. Create a new property called gold and split the gold evenly between everyone. (amount of gold is parameter)
+// divide the gold by the number of people in the party
+// iterate over each member and create a new key called gold
+// set the new key equal to gold/number of members 
+
+
+// Prompt 10: Timothy’s sword has gotten old. Change it to “Rusty Sword" 
+
+const belonginsUpdate = () => {
+    
+}
+
+belonginsUpdate()
+
+
+// console.log(party)
