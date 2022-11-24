@@ -97,11 +97,9 @@ addNewMember("Jody")
 
 // Prompt 10: Timothy’s sword has gotten old. Change it to “Rusty Sword" 
 
-const belonginsUpdate = () => {
-    
+function updateThings() {
+    return party[1].belongings[0]= "rusty sword"
 }
+updateThings()
 
-belonginsUpdate()
-
-
-// console.log(party)
+console.log(party)
