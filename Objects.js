@@ -75,10 +75,16 @@ stolenBread()
 
 // Prompt 6: Joline got upset and left the party. Take her out of the array. (use the name of the leaving member as a parameter)
  
-const memberleft = (member) => {
-    
+const memberleft = str => {
+    let member = str.toLowerCase()
+    let arr = party.map(item => item.name.toLowerCase())
+    let index = arr.indexOf(member)
+    arr.forEach(i => { i === member ? party.splice(index, 1) : null })
+    return party
+
 }
- 
+
+ memberleft("joline")
 
 
 // Prompt 7: Timothy and Sarah have been recruiting. Add a new adventurer to the party. (new adventurer is parameter)
@@ -118,6 +124,7 @@ addGold(200)
 const updateFriend = () => {
     party[2].companion.type = "Bear"
     party[2].gold -= 10
+    return party
 }
 
 updateFriend()
