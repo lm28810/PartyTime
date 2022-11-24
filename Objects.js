@@ -122,6 +122,16 @@ const updateFriend = () => {
 
 updateFriend()
 
-// Need to complete 6  update after comopeting 6 9 11
+// Prompt 11: Write a function called setLeader that takes a name as a parameter. The member with that name should have a new property leader: true while the other members have leader: false.
+
+
+const setLeader = str =>{
+    party.forEach(item => item.name === str ? item.TeadLead = true : item.TeamLead = false)
+    
+}
+
+setLeader('Timothy')
 
 console.log(party)
+
+// Need to complete 6  update after comopeting 6 9 11
