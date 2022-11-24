@@ -89,10 +89,6 @@ const addNewMember = (member) => {
 
 addNewMember("Jody")
 
-// Prompt 8: The party has been doing well! They found 200 gold. Create a new property called gold and split the gold evenly between everyone. (amount of gold is parameter)
-// divide the gold by the number of people in the party
-// iterate over each member and create a new key called gold
-// set the new key equal to gold/number of members 
 
 
 // Prompt 10: Timothy’s sword has gotten old. Change it to “Rusty Sword" 
@@ -101,5 +97,31 @@ function updateThings() {
     return party[1].belongings[0]= "rusty sword"
 }
 updateThings()
+
+// Prompt 8: The party has been doing well! They found 200 gold. Create a new property called gold and split the gold evenly between everyone. (amount of gold is parameter)
+// divide the gold by the number of people in the party
+// iterate over each member and create a new key called gold
+// set the new key equal to gold/number of members 
+
+
+const addGold = num => {
+    let piece = num/4
+    return party.forEach(i=>{
+        i.gold = piece
+    } )
+}
+
+addGold(200)
+
+// Prompt 9: Sarah is tired of taking care of a jellyfish. Subtract some gold from her and change her companion to a bear
+
+const updateFriend = () => {
+    party[2].companion.type = "Bear"
+    party[2].gold -= 10
+}
+
+updateFriend()
+
+// Need to complete 6  update after comopeting 6 9 11
 
 console.log(party)
