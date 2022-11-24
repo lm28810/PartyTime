@@ -122,8 +122,8 @@ addGold(200)
 // Prompt 9: Sarah is tired of taking care of a jellyfish. Subtract some gold from her and change her companion to a bear
 
 const updateFriend = () => {
-    party[2].companion.type = "Bear"
-    party[2].gold -= 10
+    party[1].companion.type = "Bear"
+    party[1].gold -= 10
     return party
 }
 
